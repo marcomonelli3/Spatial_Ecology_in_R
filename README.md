@@ -1,6 +1,5 @@
 # Spatial_Ecology_in_R
 
-
 This code is related to the course of Spatial ecology in R
 
 This course will be based on:
