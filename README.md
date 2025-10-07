@@ -8,4 +8,4 @@ This course will be based on:
 + Geography
 + Remote sensing
 
-A link to the course is available here: https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2025/535506
+A link to the course is available [here](https://www.unibo.it/en/study/course-units-transferable-skills-moocs/course-unit-catalogue/course-unit/2025/535506)
