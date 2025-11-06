@@ -1,0 +1,7 @@
+#Code for performing multivariate analysis with community abundance matrices
+
+#install.package("vegan")
+library(vegan)
+
+data(dune)
+head(dune)
