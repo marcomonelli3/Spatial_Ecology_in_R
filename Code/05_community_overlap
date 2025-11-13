@@ -1,0 +1,19 @@
+#Script to estimate the amount of temporal overlap of different species
+
+install.packages("overlap") 
+
+library(overlap)
+
+data(kerinci)
+head(kerinci)
+
+circtime <- kerinci$Time * 2 * pi
+circtime 
+
+kerinci$circtime <- kerinci$Time * 2 * pi
+head(kerinci)
+
+tiger <- kerinci[kerinci$Sps == "tiger",]
+densityPlot(tiger$circtime)
+
+tigertime <- tiger$circtime
