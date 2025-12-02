@@ -1,0 +1,40 @@
+#This is an example of code for the exam
+
+##How to import external data in R
+
+The packages needed in this script are the following:
+'''r
+library(terra) # managing raster and vector data
+library(imagery) # analysing RS data
+'''
+
+In order to import data in R we should set the working directory:
+
+'''r
+library(terra)
+setwd("~/Dowloads/")
+'''
+
+To check for the folder you can make use of:
+'''r
+getwd()
+'''
+
+The import of the data is done by:
+'''r
+group <- rast("image.JPG")
+'''
+
+If you receive errors, check that the path is correct and that the image is inside the folder you...
+
+To get info on the image, digit its name by:
+'''r
+group
+'''
+
+
+
+In order to plot the image we will use the RGB scheme:
+'''r
+# layer 1 = red wavelenght, layer 2 = green wavelenght, layer 3 = blue wavelenght
+
