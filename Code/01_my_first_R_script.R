@@ -2,9 +2,11 @@
 
 2 + 3
 
-naza <- 2 + 3
+ant <- 2 + 3
 
 marco <- 7 + 4
+
+marco + ant
 
 vale <- c(5, 10, 13, 20, 30) #samples of insect species richness
 
