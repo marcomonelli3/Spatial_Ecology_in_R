@@ -36,3 +36,28 @@ plot(matteo, elisa)
 #changing the point character with pch()
 plot(matteo, elisa, pch=19)
 
+#character exaggeration
+plot(matteo, elisa, pch=19, cex=2)
+
+#changing the color
+plot(matteo, elisa, pch=19, cex=2, col="blue")
+plot(matteo, elisa, pch=19, cex=2, col="chartreuse3")
+
+#changing the labels
+plot(matteo, elisa, pch=19, cex=2, col="chartreuse3", xlab="number of mammals", ylab="number of human deaths")
+
+#increasing the axis dimension
+plot(matteo, elisa, pch=19, cex=2, col="chartreuse3", xlab="number of mammals", ylab="number of human deaths", cex.axis=2)
+
+#long function
+plot(matteo, 
+     elisa, 
+     pch=19, 
+     cex=2, 
+     col="maroon2", 
+     xlab="number of mammals", 
+     ylab="number of human deaths", 
+     cex.axis=2,
+     cex.lab=2)
+
+
