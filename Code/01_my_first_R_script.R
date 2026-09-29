@@ -33,6 +33,6 @@ elisa <- c(100, 80, 50, 20, 10) # an array of human deaths due to a disease
 
 plot(matteo, elisa)
 
-#changing the point character
+#changing the point character with pch()
 plot(matteo, elisa, pch=19)
 
