@@ -12,5 +12,19 @@ bei
 # Looking at the plot in space
 plot(bei)
 
-# Changing 
+# Changing the pch
 plot(bei, pch=15)
+
+# Decreasing the dimension
+plot(bei, pch=15, cex=.5)
+
+# Drivers
+bei.extra
+
+# Plotting variables
+plot(bei.extra)
+
+# Subsetting a dataset: NEW CONCEPT!
+elevation <- bei.extra$elev
+
+
