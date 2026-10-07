@@ -57,6 +57,7 @@ plot(densitymap)
 points(bei, cex=.5)
 
 # New concept: MULTIFRAME!
+# Creating a multiframe
 par(mfrow=c(1,2))
 plot(elevation)
 plot(densitymap)
