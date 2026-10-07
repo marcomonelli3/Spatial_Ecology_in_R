@@ -43,3 +43,16 @@ elevation2 <- bei.extra[[1]]
 
 # Plot the new object
 plot(elevation2)
+
+# Creating our first map!
+densitymap <- density(bei)
+
+# Output
+densitymap
+
+# Plot the result
+plot(densitymap)
+
+# Plotting the points ontop of the density map
+points(bei, cex=.5)
+
