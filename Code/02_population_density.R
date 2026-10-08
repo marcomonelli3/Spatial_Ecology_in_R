@@ -79,3 +79,18 @@ plot(densitymap, col=cl)
 # Change colors in our maps
 cl <- colorRampPalette(c("magenta1", "green", "mediumpurple"))
 
+# Nuances
+cl3 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(3)
+plot(densitymap, col=cl3)
+
+cl10 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(10)
+plot(densitymap, col=cl10)
+
+cl100 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(100)
+plot(densitymap, col=cl100)
+
+# Exercise: make a multiframe with the map with 10 nuances ontop of that with 100
+par(mfrow=c(2,1))
+plot(densitymap, col=cl10)
+plot(densitymap, col=cl100)
+
