@@ -70,4 +70,9 @@ plot(densitymap)
 # If you have any graphical issue here is your friend:
 dev.off()
 
+# Change colors in our maps
+cl <- colorRampPalette(c("blue","green","red"))
+
+# Plot the density map and change its color thanks to cl
+
 
