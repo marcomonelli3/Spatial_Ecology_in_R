@@ -81,7 +81,23 @@ points(presence, cex=2)
 plot(elevmap, col=viridis(100))
 plot(elevmap, col=mako(100))
 
-# Exercise: plot the four ma
+# Exercise: plot the four maps togheter in the same multiframe
+par(mfrow=c(2,2))
+plot(elevmap, col=plasma(100), main="elevation")
+plot(tempmap, col=plasma(100), main="temperature")
+plot(precmap, col=plasma(100), main="precipitation")
+plot(vegemap, col=plasma(100), main="vegetation")
+
+# Making a stack
+drivers <- c(elevmap, tempmap, precmap, vegemap)
+plot(drivers, col=inferno(100))
+
+# Plot a single driver from the stack
+t <- drivers[[2]]
+# also but not optimal: t <- drivers$temperature
+plot(t)
+points(presence, cex=2)
+
 
 
 
