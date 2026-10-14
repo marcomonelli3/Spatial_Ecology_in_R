@@ -88,7 +88,7 @@ plot(tempmap, col=plasma(100), main="temperature")
 plot(precmap, col=plasma(100), main="precipitation")
 plot(vegemap, col=plasma(100), main="vegetation")
 
-# Making a stack
+# Making a stack: IMPORTANT CONCEPT!
 drivers <- c(elevmap, tempmap, precmap, vegemap)
 plot(drivers, col=inferno(100))
 
@@ -97,12 +97,4 @@ t <- drivers[[2]]
 # also but not optimal: t <- drivers$temperature
 plot(t)
 points(presence, cex=2)
-
-
-
-
-
-
-
-
 
