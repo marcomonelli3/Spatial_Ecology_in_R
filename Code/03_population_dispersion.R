@@ -40,3 +40,13 @@ plot(absence)
 # Exercise: plot presences and absences with different colors in the same plot
 plot(presence, col="blue", cex=2.5)
 points(absence, col="violet", cex=2.5)
+
+# Exercise: load the path to the elevation file
+elev <- system.file("external/elevation.asc", package="sdm")
+
+# Exercise: using the rast() function import the data
+elevmap <- rast(elev)
+plot(elevmap)
+
+# Exercise: change the colors of the map
+plot(elevmap, col=
