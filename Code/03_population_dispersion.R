@@ -3,10 +3,12 @@
 # New packages to be installed:
 # install.packages("terra")
 # install.packages("sdm")
+# install.packages("viridis")
 
 # Check the packages
 library(terra)
 library(sdm)
+library(viridis)
 
 # Path to the file
 path <- system.file("external/species.shp", package="sdm")
@@ -68,6 +70,21 @@ prec <- system.file("external/precipitation.asc", package="sdm")
 precmap <- rast(prec)
 plot(precmap, col=cl)
 points(presence, cex=2)
+
+# Exercise: import and plot vegetation with the cl ramp palette
+vege <- system.file("external/vegetation.asc", package="sdm")
+vegemap <- rast(vege)
+plot(vegemap, col=cl)
+points(presence, cex=2)
+
+# Plotting the elevation map with the  viridis package
+plot(elevmap, col=viridis(100))
+plot(elevmap, col=mako(100))
+
+# Exercise: plot the four ma
+
+
+
 
 
 
