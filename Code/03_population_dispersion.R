@@ -49,4 +49,27 @@ elevmap <- rast(elev)
 plot(elevmap)
 
 # Exercise: change the colors of the map
-plot(elevmap, col=
+cl <- colorRampPalette(c("darkblue", "green", "lightblue"))(100)
+plot(elevmap, col=cl)
+
+# Plotting presences vs. elevation
+cl <- colorRampPalette(c("red", "orange", "yellow"))(100)
+plot(elevmap, col=cl)
+points(presence, cex=2)
+
+# Exercise: import and plot temperature with the cl ramp palette
+temp <- system.file("external/temperature.asc", package="sdm")
+tempmap <- rast(temp)
+plot(tempmap, col=cl)
+points(presence, cex=2)
+
+# Exercise: import and plot precipitation with the cl ramp palette
+prec <- system.file("external/precipitation.asc", package="sdm")
+precmap <- rast(prec)
+plot(precmap, col=cl)
+points(presence, cex=2)
+
+
+
+
+
