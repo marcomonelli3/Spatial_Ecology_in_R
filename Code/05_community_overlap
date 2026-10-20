@@ -52,3 +52,9 @@ summary(tiger)
 
 # Density plot of spreading pf the tiger in the area in different times
 densityPlot(tiger$Timecirc)
+
+# Alternative method: create the time variable from the tiger dataset and use it in the calculation
+tigertime <- tiger$Timecirc
+densityPlot(tigertime)
+
+
