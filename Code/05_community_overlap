@@ -38,3 +38,17 @@ summary(kerinci)
 
 # Circular time
 circulartime <- kerinci$Time * 2 * pi
+
+# Putting the circular time inside the dataset
+kerinci$Timecirc <- kerinci$Time * 2 * pi
+
+# Looking at the new column
+head(kerinci)
+
+# Subsetting the dataset with the selection of the species tiger
+tiger <- kerinci[kerinci$Sps=="tiger",]
+
+summary(tiger)
+
+# Density plot of spreading pf the tiger in the area in different times
+densityPlot(tiger$Timecirc)
