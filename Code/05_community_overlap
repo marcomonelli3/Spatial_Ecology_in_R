@@ -33,5 +33,8 @@ head(kerinci)
 # If you want to look at the end of the dataset: tail()
 tail(kerinci)
 
-# getting a summary of the dataset
+# Getting a summary of the dataset
 summary(kerinci)
+
+# Circular time
+circulartime <- kerinci$Time * 2 * pi
