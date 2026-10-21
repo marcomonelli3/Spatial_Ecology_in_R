@@ -102,3 +102,16 @@ loop2 <- function(){
 loop2()
 
 # Make a loop with the power operator
+loop2 <- function(){
+  for (i in 1:10) {
+    multi <- i ^ 4
+    print(multi)
+    }
+  }
+
+loop2()
+
+# Making an output
+sink("numbers.txt")
+loop2()
+sink()
