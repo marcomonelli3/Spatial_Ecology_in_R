@@ -7,10 +7,10 @@ library(imageRy)
 library(terra)
 library(viridis)
 
-# Listing data inside imageRy
+# Listing data inside imageRy (Checking the data)
 im.list()
 
-# importing the first band
+# Importing one layer...
 b2 <- im.import("sentinel.dolomites.b2.tif")
 plot(b2)
 plot(b2, col=magma(100))
