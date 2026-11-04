@@ -38,9 +38,29 @@ plot(b4, col=cividis(100))
 b8 <- im.import("sentinel.dolomites.b8.tif")
 plot(b8)
 
-im.multiframe(1,2)
+# Build a 4x4 multiframe and plot all the bands with the default palette
+im.multiframe(2,2)
+plot(b2)
+plot(b3)
 plot(b4)
 plot(b8)
+
+# multiframe and colorRamp Palette
+clb <- colorRampPalette(c("blue4", "blue1", "cadetblue1"))(100)
+plot(b2, col=clb)
+
+# Exercise: do the same for the b3 - green band
+clg <- colorRampPalette(c("darkolivegreen", "chartreuse3", "chartreuse"))(100)
+plot(b3, col=clg)
+# or red band
+clr <- colorRampPalette(c("firebrick4", "firebrick3", "firebrick"))(100)
+plot(b4, col=clr)
+# band number 8: NIR band
+cln <- colorRampPalette(c("magenta", "green", "yellow"))(100)
+plot(b8, col=cln)
+
+# Create a stack of all bands togheter with a new object called sent considering...
+
 
 # build your own function for plotting
 duccio <- function(x,y){
