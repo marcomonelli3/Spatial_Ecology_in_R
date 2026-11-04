@@ -60,30 +60,18 @@ cln <- colorRampPalette(c("magenta", "green", "yellow"))(100)
 plot(b8, col=cln)
 
 # Create a stack of all bands togheter with a new object called sent considering...
-
-
-# build your own function for plotting
-duccio <- function(x,y){
-  par(mfrow=c(x,y))
-  }
-
-# Exercise: with the function duccio, build a multiframe of 2 rows and 2 columns and plot all the imported data
-duccio(2,2)
-plot(b2)
-plot(b3)
-plot(b4)
-plot(b8)
-
-# Exercise: create a multiframe with 1 row and 2 columns, plot one against the other 
-# b2 b3
-# b2 b8
-
-duccio(1,2)
-plot(b2,b3)
-plot(b2,b8)
-
-# creating colored images
 sent <- c(b2, b3, b4, b8)
+plot(sent, col=magma(100))
+
+# Reversing colors
+plot(sent, col=magma(100, direction=-1))
+
+# Stack by the imagery package:
+sentinel <- im.import("sentinel.dolomites")
+plot(sent, col=mako(100))
+
+# Exercise: starting from the stack called sentinel plot only the NIR band
+
 
 # layer 1 = original (from Sentinel-2) b2 = blue
 # layer 2 = original (from Sentinel-2) b3 = green
