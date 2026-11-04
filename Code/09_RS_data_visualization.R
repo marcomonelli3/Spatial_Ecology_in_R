@@ -71,12 +71,13 @@ sentinel <- im.import("sentinel.dolomites")
 plot(sent, col=mako(100))
 
 # Exercise: starting from the stack called sentinel plot only the NIR band
+# original b2 = layer 1 in the stack
+# original b3 = layer 2 in the stack
+# original b4 = layer 3 in the stack
+# original b8 = layer 4 in the stack
+# since the stack was built by: sent <- c(b2, b3, b4, b8)
+plot[[4]] # verifica se è giusto
 
-
-# layer 1 = original (from Sentinel-2) b2 = blue
-# layer 2 = original (from Sentinel-2) b3 = green
-# layer 3 = original (from Sentinel-2) b4 = red
-# layer 4 = original (from Sentinel-2) b8 = NIR
 
 # natural color image
 im.plotRGB(sent, r=3, g=2, b=1, title='natural color')
