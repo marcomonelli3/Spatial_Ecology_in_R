@@ -10,39 +10,31 @@ library(viridis)
 # Listing data inside imageRy (Checking the data)
 im.list()
 
-# Importing one layer...
+# Importing the first band
 b2 <- im.import("sentinel.dolomites.b2.tif")
 plot(b2)
-plot(b2, col=magma(100))
 
-# green band
+# Change the palette thanks to virididis package
+plot(b2, col=inferno(100))
+
+# Exercise: import the green band of sentinel and plot it with the magma legend
 b3 <- im.import("sentinel.dolomites.b3.tif")
-plot(b3)
+plot(b3, col=magma(100))
 
-cl <- colorRampPalette(c("black","grey","white"))(100)
-plot(b3, col=cl)
-
-# multiframe
+# Make a multiframe with one image besides the other
 par(mfrow=c(1,2))
 # or
 im.multiframe(1,2)
 plot(b2, col=cl)
 plot(b3, col=cl)
 
-# the multiframe from the CRAN is not properly working, so use the GitHub version:
-duccio <- function(x,y){
-   par(mfrow=c(x,y))
-   }
 
-dev.off()
-plot(b2,b3)
 
-# Exercise: import band 4
+# Exercise: import the red band (band number 4)
 b4 <- im.import("sentinel.dolomites.b4.tif")
-plot(b4)
-plot(b4, col=cl)
+plot(b4, col=cividis(100))
 
-# import band 8
+# Exercise: import the infrared band (band number 8)
 b8 <- im.import("sentinel.dolomites.b8.tif")
 plot(b8)
 
