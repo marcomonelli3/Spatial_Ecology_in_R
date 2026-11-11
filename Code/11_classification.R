@@ -5,7 +5,7 @@
 library(terra)
 library(imageRy)
 
-List of the data
+# List of the data
 im.list()
 
 # Exercise: import the Solar Orbiter image and give and assign it to the object called "sun"
