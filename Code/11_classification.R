@@ -9,7 +9,7 @@ library(imageRy)
 im.list()
 
 # Exercise: import the Solar Orbiter image and give and assign it to the object called "sun"
-sun <-
+sun <- im.import("Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg")
 
 # Classify the data 
 sunclass <- im.classify(sun, num_clusters=3)
