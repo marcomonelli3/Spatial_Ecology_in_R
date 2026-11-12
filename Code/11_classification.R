@@ -142,9 +142,18 @@ p1 + p2
 im.ggplot(m1992[[1]])
 im.ggplot(m2006[[1]])
 
+# Plotting satellite data and stats together
+s1 <- im.ggplot(m1992[[1]])
+s2 <- im.ggplot(m2006[[1]])
+
+# Final plot
+(s1 | s2) /
+(p1 | p2) 
 
 # Doing the same with RGB images
 rgb1 <- im.ggplotRGB(m1992)
 rgb2 <- im.ggplotRGB(m2006)
 
-
+# Final plot
+(rgb1 | rgb2) /
+(p1 | p2) 
