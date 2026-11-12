@@ -140,8 +140,7 @@ p1 + p2
 
 # Using patchwork with satellite data
 im.ggplot(m1992[[1]])
-
-----
+im.ggplot(m2006[[1]])
 
 
 # Doing the same with RGB images
