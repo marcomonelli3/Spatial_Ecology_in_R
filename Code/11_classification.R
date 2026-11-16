@@ -1,24 +1,29 @@
-# R code for classifying images thanks to k-means:
+# R code for classifying images thank to k-means:
 # https://github.com/ducciorocchini/Spatial_Ecology_in_R_2026/blob/main/kmeans.md
 
+
 # packages
+# install.packages("ggplot2")
+# install.packages("patchwork")
 library(terra)
 library(imageRy)
+library(ggplot2)
+library(patchwork)
 
 # List of the data
 im.list()
 
-# Exercise: import the Solar Orbiter image and give and assign it to the object called "sun"
+# Exercisee: import the Solar Orbiter image and assign it to the pbject called"sun"
 sun <- im.import("Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg")
 
-# Classify the data 
+# Classifying the data
 sunclass <- im.classify(sun, num_clusters=3)
 
 # Seed
 sunclass <- im.classify(sun, num_clusters=3, seed=42)
 
-# Importing data of Matogrosso
-# Exercise: import the data of Mato Grosso and give them names m1992 and m2006
+# Imprting data of Matogrosso
+# Exercise: import the data of Mato Grosso and give them the names m1992 and m2006
 m1992 <- im.import("matogrosso_l5_1992219_lrg.jpg")
 m2006 <- im.import("matogrosso_ast_2006209_lrg.jpg")
 
@@ -102,17 +107,17 @@ ggplot(tabout, aes(x=class, y=perc1992, color=class)) +
 ggplot(tabout, aes(x=class, y=perc2006, color=class)) + 
   geom_bar(stat="identity", fill="white")
 
-# Using the patchwork package to plot several plots togheter
+# Using the patchwork package to plot several plots together
 # Assign the plots to objects
 p1 <- ggplot(tabout, aes(x=class, y=perc1992, color=class)) + 
   geom_bar(stat="identity", fill="white")
 
 p2 <- ggplot(tabout, aes(x=class, y=perc2006, color=class)) + 
-  geom_bar(stat="identity", fill="white")
+  geom_bar(stat="identity", fill="white") 
 
 p1 + p2
 
-# Exercise: with patchwork, put one plot on top of the other 
+# Exercise: with patchwork, put one plot ontop of the other
 p1 / p2
 
 # Changing the scale of the data
@@ -129,8 +134,9 @@ p1 + p2
 # Removing one legend
 p1 <- ggplot(tabout, aes(x=class, y=perc1992, color=class)) + 
   geom_bar(stat="identity", fill="white") +
-  ylim(c(0,100)) +
+  ylim(c(0,100)) + 
   theme(legend.position = "none")
+
 
 p2 <- ggplot(tabout, aes(x=class, y=perc2006, color=class)) + 
   geom_bar(stat="identity", fill="white") +
