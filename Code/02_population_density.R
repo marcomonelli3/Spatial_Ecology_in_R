@@ -78,6 +78,7 @@ plot(densitymap, col=cl)
 
 # Change colors in our maps
 cl <- colorRampPalette(c("magenta1", "green", "mediumpurple"))
+plot(densitymap, col=cl)
 
 # Nuances
 cl3 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(3)
